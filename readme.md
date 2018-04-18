@@ -13,7 +13,7 @@
 `docker pull dwmkerr/dynamodb`
 
 Then run:
-`docker run -p 888:8000 dwmkerr/dynamodb -sharedDb`
+`docker run -p 8888:8000 dwmkerr/dynamodb -sharedDb`
 
 Then:
 `aws dynamodb create-table --cli-input-json file://schema.json --endpoint-url http://localhost:8888`

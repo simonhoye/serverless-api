@@ -1,0 +1,11 @@
+{
+  "TableName": "apptable",
+  "KeySchema": [{ "AttributeName": "timestamp", "KeyType": "RANGE" }],
+  "AttributeDefinitions": [
+    { "AttributeName": "timestamp", "AttributeType": "N" }
+  ],
+  "ProvisionedThroughput": {
+    "ReadCapacityUnits": 5,
+    "WriteCapacityUnits": 5
+  }
+}

@@ -9,8 +9,20 @@
 ##### Install dependencies
 `npm install`
 
+##### Setup DynamoDB locally
+`docker pull dwmkerr/dynamodb`
+
+Then run:
+`docker run -p 888:8000 dwmkerr/dynamodb -sharedDb`
+
+Then:
+`aws dynamodb create-table --cli-input-json file://schema.json --endpoint-url http://localhost:8888`
+
 ##### Run API locally
 `sam local start-api`
 
 #### Et Voilà
 http://127.0.0.1:3000/test
+
+##### Deploy
+`aws cloudformation package --template <your yaml> --s3-bucket <your bucket> --output-template-file <an output yaml>`

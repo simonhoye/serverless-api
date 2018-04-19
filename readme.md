@@ -15,7 +15,7 @@
 Then run:
 `docker run -p 8888:8000 dwmkerr/dynamodb -sharedDb`
 
-Then:
+Then create table in DynamoDB:
 `aws dynamodb create-table --cli-input-json file://schema.json --endpoint-url http://localhost:8888`
 
 ##### Run API locally
@@ -25,4 +25,10 @@ Then:
 http://127.0.0.1:3000/test
 
 ##### Deploy
-`aws cloudformation package --template <your yaml> --s3-bucket <your bucket> --output-template-file <an output yaml>`
+`./deploy.sh`
+
+Then create table in DynamoDB:
+``aws dynamodb create-table --cli-input-json file://schema.json`
+
+#### Teardown
+`.tearDown.sh`

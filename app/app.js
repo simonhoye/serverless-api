@@ -3,7 +3,7 @@ const AWS = require('aws-sdk');
 
 AWS.config.update({
   region: "ap-southeast-2",
-  endpoint: "http://10.0.1.191:8888"
+  endpoint: "http://docker.for.mac.host.internal:8888"
 });
 
 const dc = new AWS.DynamoDB.DocumentClient();

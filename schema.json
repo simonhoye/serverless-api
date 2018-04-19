@@ -1,6 +1,6 @@
 {
   "TableName": "apptable",
-  "KeySchema": [{ "AttributeName": "timestamp", "KeyType": "RANGE" }],
+  "KeySchema": [{ "AttributeName": "timestamp", "KeyType": "HASH" }],
   "AttributeDefinitions": [
     { "AttributeName": "timestamp", "AttributeType": "N" }
   ],

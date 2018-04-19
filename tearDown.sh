@@ -1,0 +1,1 @@
+aws cloudformation delete-stack --stack-name serverless-api && aws s3 rb s3://serverless-api-hoye.cloud --force

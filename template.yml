@@ -8,6 +8,7 @@ Resources:
       Handler: app/index.handler
       Runtime: nodejs6.10
       Timeout: 60
+      Policies: AmazonDynamoDBFullAccess
       Events:
         ApiEventSource:
           Type: Api
@@ -26,7 +27,7 @@ Resources:
       KeySchema:
         -
           AttributeName:  "timestamp"
-          KeyType: "RANGE"
+          KeyType: "HASH"
       ProvisionedThroughput:
         ReadCapacityUnits: 5
         WriteCapacityUnits: 5

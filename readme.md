@@ -31,4 +31,4 @@ Then create table in DynamoDB:
 ``aws dynamodb create-table --cli-input-json file://schema.json`
 
 #### Teardown
-`.tearDown.sh`
+`./tearDown.sh`

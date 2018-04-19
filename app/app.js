@@ -24,4 +24,7 @@ app.get("/test", (req, res) => {
       res.status(500).send(err);
     });
 });
+app.get("/ping", (req, res) => {
+  res.status(200).send({result: 'pong'});
+});
 module.exports = app;
